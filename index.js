@@ -6,7 +6,13 @@ const path = require('path');
 const file = process.argv[2];
 
 if (!file) {
-  console.log("Penggunaan: batakscript <namafile.btc>");
+  console.log("Penggunaan: batakscript <namafile.horas>");
+  process.exit(1);
+}
+
+// Validasi ekstensi file .horas
+if (!file.endsWith('.horas')) {
+  console.error("Error: Berkas harus berekstensi .horas (contoh: program.horas)");
   process.exit(1);
 }
 
@@ -32,7 +38,6 @@ try {
   const code = fs.readFileSync(filePath, 'utf-8');
   const jsCode = transpile(code);
   
-  // Eksekusi kode hasil transpiler
   eval(jsCode);
 } catch (err) {
   console.error("Error Batakscript:", err.message);
