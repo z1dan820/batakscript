@@ -1,0 +1,23 @@
+{
+  "name": "@z1dan820/batakscript",
+  "version": "1.0.0",
+  "description": "Bahasa pemrograman berbasis sintaks Batak",
+  "main": "index.js",
+  "bin": {
+    "batakscript": "./index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "batakscript",
+    "batak",
+    "programming-language",
+    "cli"
+  ],
+  "author": "z1dan820",
+  "license": "MIT"
+}
